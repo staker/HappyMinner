@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout">
+
+    <RelativeLayout
+        android:id="@+id/title_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/shape_gradient_full_red_0">
+        <!--如果这里写的高度没有用，那么下面的布局就要重新再包装一个RelativeLayout，并设置高度为50dip-->
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/selector_shape_nav"
+            android:paddingRight="12dip"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:id="@+id/img_left"
+                android:layout_width="8dip"
+                android:layout_height="16dip"
+                android:layout_marginLeft="12dip"
+                android:background="@drawable/icon_back_white"
+                />
+            <TextView
+                android:id="@+id/txt_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginLeft="6dip"
+                android:text="返回"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginLeft="80dip"
+            android:layout_marginRight="80dip"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            android:maxLines="2"
+            android:text="奖励规则"/>
+
+
+
+    </RelativeLayout>
+
+    <com.ailink.view.ProgressWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+    </com.ailink.view.ProgressWebView>
+</LinearLayout>

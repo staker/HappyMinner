@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="juhuiwan.ailink.android">
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.xftz.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- sharesdk权限 begin -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.ailink.db.MyApplication"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data  android:name="design_width"   android:value="720" />
+        <meta-data  android:name="design_height"  android:value="1280" />
+
+
+        <!--这是友盟统计分析用到的渠道号和appkey-->
+        <meta-data android:value="5acc4f17b27b0a79eb0000d5" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="${UMENG_CHANNEL}" android:name="UMENG_CHANNEL"/>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="gHqN5h7IDmzqB62oCEmo">
+        </meta-data>
+
+
+        <!--这是微信登录回调的Activity-->
+        <activity android:name="juhuiwan.ailink.android.wxapi.WXEntryActivity" android:exported="true" />
+
+
+        <!--微信分享回调 -->
+        <activity
+            android:name="libs.util.umeng.WXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+
+            <intent-filter>
+                <data android:scheme="tencent1105940721" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <activity android:name="com.ailink.activity.LuancherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.ailink.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.ailink.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.ailink.activity.ChangePwdActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.ailink.activity.MeSettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.ailink.activity.AppIntroActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.ailink.activity.SendGiftActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.ailink.activity.MeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity android:name="com.ailink.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.ailink.activity.MainHomeActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+
+        <activity android:name="com.ailink.activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity android:name="com.ailink.activity.ContractActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ailink.activity.NewContractActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.ailink.activity.MyContractActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.ailink.activity.FeedBackActivity"
+            android:screenOrientation="portrait" >
+
+        </activity>
+
+
+        <activity android:name="com.ailink.activity.SpeedRecordActivity"
+            android:screenOrientation="portrait" >
+
+        </activity>
+
+
+        <activity
+            android:name="com.ailink.activity.MyMinerActivity"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.ailink.activity.MinerActivity"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.ailink.activity.AboutActivity"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.ailink.activity.MessageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.NoticeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.ailink.activity.MinerHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.ailink.activity.BindPhoneActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.SearchMinerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.ailink.activity.InviteFriendActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.PreviewPosterActivity"
+            android:theme="@style/translucent"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.ailink.activity.ShowLiveActivity"
+            android:theme="@style/TranslucentFullScreenTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.ShowLoginLayerActivity"
+            android:theme="@style/TranslucentFullScreenTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.ailink.activity.QianDaoActivity"
+            android:theme="@style/TranslucentFullScreenTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.ailink.activity.ReplaceMinerActivity"
+            android:theme="@style/translucent"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.FangzhiMinerActivity"
+            android:theme="@style/translucent"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.NoticeDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.BuyWishPoolActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.BuyWolfPoolActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.BuyLastStoneActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.BuyLastWaterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.BuyLotteryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.AutoOpenKuangActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.ailink.activity.PoolActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.MissionActivity3"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.ailink.activity.MissionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.MissionQiangGiftActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.MissionSendGiftActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.TotalRankActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.RankGiftActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ailink.activity.QiangKuangMissionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

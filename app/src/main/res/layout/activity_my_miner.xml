@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/appColorBackground">
+    <include
+        layout="@layout/layout_top"/>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nest_scrollview"
+        style="@style/nestedScrollViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+     >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dip">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="我的矿工"-->
+                    <!--android:layout_marginLeft="12dip"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:textColor="#000000"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/txt_miner_pkg"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="12dip"-->
+                    <!--android:text="矿工位 0/0"-->
+                    <!--android:textColor="@color/gray_33"-->
+                    <!--android:textSize="14sp" />-->
+            <!--</RelativeLayout>-->
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_my_miner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="8dip" />
+
+
+
+
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_zhaomu_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_zhaomu_icon01"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_zhaomu"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_zhaomu_icon01"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:text="招募矿工"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+                    <TextView
+                        android:id="@+id/txt_find_miner01"
+                        android:layout_width="72dip"
+                        android:layout_height="28dip"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        android:gravity="center"
+                        android:text="找矿工"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/selector_shape_gradient_blue_55"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_zhaomu_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_zhaomu_icon02"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_zhaomu"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_zhaomu_icon02"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:text="招募矿工"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+                    <TextView
+                        android:id="@+id/txt_find_miner02"
+                        android:layout_width="72dip"
+                        android:layout_height="28dip"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        android:gravity="center"
+                        android:text="找矿工"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/selector_shape_gradient_blue_55"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_zhaomu_03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_zhaomu_icon03"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_zhaomu"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_zhaomu_icon03"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:text="招募矿工"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+                    <TextView
+                        android:id="@+id/txt_find_miner03"
+                        android:layout_width="72dip"
+                        android:layout_height="28dip"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        android:gravity="center"
+                        android:text="找矿工"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/selector_shape_gradient_blue_55"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_zhaomu_04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_zhaomu_icon04"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_zhaomu"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_zhaomu_icon04"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:text="招募矿工"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+                    <TextView
+                        android:id="@+id/txt_find_miner04"
+                        android:layout_width="72dip"
+                        android:layout_height="28dip"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        android:gravity="center"
+                        android:text="找矿工"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/selector_shape_gradient_blue_55"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_zhaomu_05"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_zhaomu_icon05"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_zhaomu"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_zhaomu_icon05"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:text="招募矿工"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+                    <TextView
+                        android:id="@+id/txt_find_miner05"
+                        android:layout_width="72dip"
+                        android:layout_height="28dip"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        android:gravity="center"
+                        android:text="找矿工"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/selector_shape_gradient_blue_55"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_zhaomu_06"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_zhaomu_icon06"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_zhaomu"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_zhaomu_icon06"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:text="招募矿工"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+                    <TextView
+                        android:id="@+id/txt_find_miner06"
+                        android:layout_width="72dip"
+                        android:layout_height="28dip"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        android:gravity="center"
+                        android:text="找矿工"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/selector_shape_gradient_blue_55"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_zhaomu_07"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:layout_marginBottom="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_zhaomu_icon07"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_zhaomu"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_zhaomu_icon07"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:text="招募矿工"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+                    <TextView
+                        android:id="@+id/txt_find_miner07"
+                        android:layout_width="72dip"
+                        android:layout_height="28dip"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        android:gravity="center"
+                        android:text="找矿工"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/selector_shape_gradient_blue_55"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_mission01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_icon02"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_mission"
+                        />
+                    <TextView
+                        android:id="@+id/txt_mission_state01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_icon02"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:text="购买身价1000的矿工"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        >
+                        <TextView
+                            android:id="@+id/txt_mission01"
+                            android:layout_width="72dip"
+                            android:layout_height="28dip"
+                            android:gravity="center"
+                            android:text="做任务"
+                            android:textSize="14sp"
+                            android:clickable="true"
+                            android:textColor="@color/white"
+                            android:background="@drawable/selector_color_gradient_yellow01_0"/>
+                        <TextView
+                            android:id="@+id/txt_pay01"
+                            android:layout_width="72dip"
+                            android:layout_height="28dip"
+                            android:layout_marginTop="5dip"
+                            android:gravity="center"
+                            android:text="付费开启"
+                            android:textSize="14sp"
+                            android:clickable="true"
+                            android:textColor="@drawable/selector_text_color_blue_white"
+                            android:background="@drawable/selector_shape_blue_55"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_mission02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_icon03"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_mission"
+                        />
+                    <TextView
+                        android:id="@+id/txt_mission_state02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_icon03"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:text="邀请5个好友"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        >
+                        <TextView
+                            android:id="@+id/txt_mission02"
+                            android:layout_width="72dip"
+                            android:layout_height="28dip"
+                            android:gravity="center"
+                            android:text="做任务"
+                            android:textSize="14sp"
+                            android:clickable="true"
+                            android:textColor="@color/white"
+                            android:background="@drawable/selector_color_gradient_yellow01_0"/>
+                        <TextView
+                            android:id="@+id/txt_pay02"
+                            android:layout_width="72dip"
+                            android:layout_height="28dip"
+                            android:layout_marginTop="5dip"
+                            android:gravity="center"
+                            android:text="付费开启"
+                            android:textSize="14sp"
+                            android:clickable="true"
+                            android:textColor="@drawable/selector_text_color_blue_white"
+                            android:background="@drawable/selector_shape_blue_55"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_mission03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_icon04"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_mission"
+                        />
+                    <TextView
+                        android:id="@+id/txt_mission_state03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_icon04"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:text="邀请20个好友"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        >
+                        <TextView
+                            android:id="@+id/txt_mission03"
+                            android:layout_width="72dip"
+                            android:layout_height="28dip"
+                            android:gravity="center"
+                            android:text="做任务"
+                            android:textSize="14sp"
+                            android:clickable="true"
+                            android:textColor="@color/white"
+                            android:background="@drawable/selector_color_gradient_yellow01_0"/>
+                        <TextView
+                            android:id="@+id/txt_pay03"
+                            android:layout_width="72dip"
+                            android:layout_height="28dip"
+                            android:layout_marginTop="5dip"
+                            android:gravity="center"
+                            android:text="付费开启"
+                            android:textSize="14sp"
+                            android:clickable="true"
+                            android:textColor="@drawable/selector_text_color_blue_white"
+                            android:background="@drawable/selector_shape_blue_55"/>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_mission04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_icon05"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_mission"
+                        />
+                    <TextView
+                        android:id="@+id/txt_mission_state04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_icon05"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+
+                    <TextView
+                        android:id="@+id/txt_pay04"
+                        android:layout_width="72dip"
+                        android:layout_height="28dip"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        android:text="付费开启"
+                        android:textSize="14sp"
+                        android:clickable="true"
+                        android:textColor="@drawable/selector_text_color_blue_white"
+                        android:background="@drawable/selector_shape_blue_55"/>
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/txt_mission04"-->
+                        <!--android:layout_width="72dip"-->
+                        <!--android:layout_height="28dip"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_marginRight="5dip"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="做任务"-->
+                        <!--android:textSize="14sp"-->
+                        <!--android:clickable="true"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:background="@drawable/selector_color_gradient_yellow01_0"/>-->
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_mission05"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_icon06"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_mission"
+                        />
+                    <TextView
+                        android:id="@+id/txt_mission_state05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_icon06"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+                    <TextView
+                        android:id="@+id/txt_pay05"
+                        android:layout_width="72dip"
+                        android:layout_height="28dip"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dip"
+                        android:text="付费开启"
+                        android:textSize="14sp"
+                        android:clickable="true"
+                        android:textColor="@drawable/selector_text_color_blue_white"
+                        android:background="@drawable/selector_shape_blue_55"/>
+                    <!--<TextView-->
+                    <!--android:id="@+id/txt_mission04"-->
+                    <!--android:layout_width="72dip"-->
+                    <!--android:layout_height="28dip"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="5dip"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="做任务"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:clickable="true"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:background="@drawable/selector_color_gradient_yellow01_0"/>-->
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_mission06"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="16dip"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingBottom="15dip">
+                    <ImageView
+                        android:id="@+id/img_icon07"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_mission"
+                        />
+                    <TextView
+                        android:id="@+id/txt_mission_state06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_icon07"
+                        android:layout_marginLeft="6dip"
+                        android:layout_centerVertical="true"
+                        android:textSize="15sp"
+                        android:textColor="@color/gray_33"/>
+                    <TextView
+                    android:id="@+id/txt_mission04"
+                    android:layout_width="72dip"
+                    android:layout_height="28dip"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dip"
+                    android:gravity="center"
+                    android:text="做任务"
+                    android:textSize="14sp"
+                    android:clickable="true"
+                    android:textColor="@color/white"
+                    android:background="@drawable/selector_color_gradient_yellow01_0"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

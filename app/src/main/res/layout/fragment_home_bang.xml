@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+    android:background="#ffffff"
+        >
+
+        <ImageView
+            android:id="@+id/img_home_bang"
+            android:layout_width="662px"
+            android:layout_height="163px"
+            />
+
+    <TextView
+        android:id="@+id/txt_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_gravity="center_horizontal"
+        android:lines="1"
+        android:gravity="center"
+        android:text="暂时无人上榜"
+        android:ellipsize="end"
+        android:textColor="@color/gray_33"
+        android:textSize="16sp"/>
+
+        <LinearLayout
+            android:id="@+id/layout_top3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dip"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/rank_left_bg"
+                android:paddingBottom="5dip"
+
+                android:gravity="bottom"
+                >
+
+                <RelativeLayout
+                    android:layout_width="62.5dip"
+                    android:layout_height="62.5dip"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_rank_empty_bule_550">
+
+                    <com.ailink.view.RoundImageView
+                        android:id="@+id/img_head02"
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        />
+                </RelativeLayout>
+
+
+
+                <ImageView
+                    android:layout_width="26dip"
+                    android:layout_height="26dip"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icon_rank02"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_name02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/gray_33"
+                    android:layout_marginTop="6dip"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/txt_price02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:lines="1"
+                    android:textColor="@color/gray_33"
+                    android:layout_marginTop="1dip"
+                    android:textSize="14sp"/>
+
+
+
+                <TextView
+                    android:id="@+id/txt_desc02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/gray_99"
+                    android:layout_marginTop="1dip"
+                    android:textSize="14sp"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dip"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:paddingBottom="5dip"
+                android:background="@drawable/rank_center_bg">
+
+
+                <RelativeLayout
+                    android:layout_width="75dip"
+                    android:layout_height="75dip"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_rank_empty_yellow_550">
+
+                    <com.ailink.view.RoundImageView
+                        android:id="@+id/img_head01"
+                        android:layout_width="72.5dip"
+                        android:layout_height="72.5dip"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        />
+                </RelativeLayout>
+
+
+
+                <ImageView
+                    android:layout_width="26dip"
+                    android:layout_height="26dip"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icon_rank01"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_name01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/gray_33"
+                    android:layout_marginTop="6dip"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/txt_price01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:lines="1"
+                    android:textColor="@color/gray_33"
+                    android:layout_marginTop="1dip"
+                    android:textSize="14sp"/>
+
+
+
+                <TextView
+                    android:id="@+id/txt_desc01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/gray_99"
+                    android:layout_marginTop="1dip"
+                    android:textSize="14sp"/>
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dip"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:paddingBottom="5dip"
+                android:background="@drawable/rank_right_bg">
+
+                <RelativeLayout
+                    android:layout_width="62.5dip"
+                    android:layout_height="62.5dip"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_rank_empty_cafe_550">
+
+                    <com.ailink.view.RoundImageView
+                        android:id="@+id/img_head03"
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        />
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:layout_width="26dip"
+                    android:layout_height="26dip"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icon_rank03"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_name03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/gray_33"
+                    android:layout_marginTop="6dip"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/txt_price03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:lines="1"
+                    android:textColor="@color/gray_33"
+                    android:layout_marginTop="1dip"
+                    android:textSize="14sp"/>
+
+
+
+                <TextView
+                    android:id="@+id/txt_desc03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/gray_99"
+                    android:layout_marginTop="1dip"
+                    android:textSize="14sp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            style="@style/horizontal_line_style"
+            android:layout_marginTop="3dip"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_home_rank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:descendantFocusability="blocksDescendants" />
+
+    </LinearLayout>
+

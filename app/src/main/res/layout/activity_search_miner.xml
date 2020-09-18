@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip">
+
+        <LinearLayout
+            android:id="@+id/layout_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="60dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_full_gray_5">
+            <ImageView
+                android:id="@+id/img_icon"
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dip"
+                android:background="@drawable/icon_search" />
+
+            <EditText
+                android:id="@+id/edt_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="6dip"
+                android:hint="搜索昵称/ID"
+                android:textColor="@color/gray_33"
+                android:background="@color/translucent"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="60dip"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="取消"
+            android:textColor="@drawable/selector_text_color_gray_black"
+            android:background="@color/translucent"
+            android:textSize="15sp"
+            android:clickable="true"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.7dip"
+        android:layout_marginTop="10dip"
+        android:background="#d0d0d0" />
+
+    <LinearLayout
+        android:id="@+id/layout_no_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="300dip"
+            android:layout_height="151dip"
+            android:layout_marginTop="80dip"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/no_search_result" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="没有搜到你要找的矿工哦~"
+            android:textColor="@color/gray_66"
+            android:layout_marginTop="20dip"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="换个关键词试试"
+            android:textColor="@color/gray_66"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_spring_view"/>
+
+</LinearLayout>

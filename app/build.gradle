@@ -1,0 +1,185 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "juhuiwan.ailink.android"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 23
+        versionName "1.5.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        jackOptions{
+            enabled = true
+        }
+    }
+    compileOptions{
+        sourceCompatibility = 1.7
+        targetCompatibility = 1.7
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        General {
+            manifestPlaceholders = [UMENG_CHANNEL: "General"]
+        }
+//        Tencent {
+//            manifestPlaceholders = [UMENG_CHANNEL: "Tencent"]
+//        }
+//        GooglePlay {
+//            manifestPlaceholders = [UMENG_CHANNEL: "GooglePlay"]
+//        }
+//        Baidu {
+//            manifestPlaceholders = [UMENG_CHANNEL: "Baidu"]
+//        }
+//        Wandoujia {
+//            manifestPlaceholders = [UMENG_CHANNEL: "Wandoujia"]
+//        }
+//        Xiaomi {
+//            manifestPlaceholders = [UMENG_CHANNEL: "Xiaomi"]
+//        }
+    }
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'staker'
+            storeFile file('../ailink_keystore.jks')
+            storePassword 'staker'
+        }
+        release {
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+}
+
+
+
+
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+    appKey "267059ec0e864"
+    appSecret "56fe79c2b1e1b9d11eaf50958318211e"
+    ShareSDK {
+//version "3.1.4"
+//        gui false
+        devInfo {
+
+
+
+            Wechat{
+                appId "wxdd0d5625afe09ce6"
+                appSecret "1e49558182440a17344e92d5612ce47a"
+                bypassApproval false
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+            }
+            WechatMoments{
+                sortId 1
+                appId "wxdd0d5625afe09ce6"
+                appSecret "1e49558182440a17344e92d5612ce47a"
+                bypassApproval false
+
+            }
+
+        }
+    }
+    SMSSDK {
+
+    }
+    AnalySDK {}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+repositories {
+//    z这个是由于下面的
+// compile 'com.github.ybq:Android-SpinKit:1.1.0'需要加上的
+    maven { url "https://jitpack.io" }
+    //Bmob的maven仓库地址，必须填写
+    maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
+
+    maven { url "http://lib.gcssloop.com:8081/repository/gcssloop-central/"}
+
+
+    flatDir{
+        dirs 'libs'
+    }
+
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:23.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
+    //优美的进度条旋转效果
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    //沉浸式状态栏，设置状态栏位半透明，可以设置各种颜色
+    compile 'com.android.support:cardview-v7:23.4.0'
+    //类似卡片view（有阴影效果的卡片），在直播的recycle的item里面，个人信息展示。
+    compile 'com.google.code.gson:gson:2.8.0'
+    //json库
+    compile 'com.youth.banner:banner:1.4.8'
+    //首页头部用到的banner，可以填入多张图片。（包括一个指示器，不一定有）
+    compile 'de.greenrobot:eventbus:2.4.0'
+    //和观察者开发模式有点类似，在首页注册，然后取消注册，在另外的类里面可以用这个类来发送数据，在别的地方接收。有点类似广播，比广播强一点
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //网络图片加载，也可以加载本地图片。在imageUtil类里面有用到  和ImageLoader类似
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    //recycleview的库，查看hongyang的博客
+    //    compile 'com.github.bumptech.glide:okhttp-integration:1.4.0@aar'//网络加载框架，hongyang博客
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    //友盟统计
+    compile 'com.liaoinstan.springview:library:1.2.6'
+    //下拉刷新的view，任何一个下拉刷新的地方都是用的这个
+    compile project(':MaterialDesignLibrary')
+    //view库，各种自定义的view（有水波纹效果的外层布局，和按钮）
+    compile project(':autolayout')
+    //自动布局
+    compile 'com.android.support:support-annotations:25.3.1'
+    compile 'com.github.w446108264:ScrollableLayout:1.0.3'
+    //这个库的用法和NestSrollView一样，但是他可以很方便的给诸如ListView Recycleview添加可以滚动的头部（不带下拉刷新效果）
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    //这即使一个强大的下拉ScrollView控件，里面可以包含任何布局
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+    //没有使用特殊 Header，可以不加这行
+    //    compile 'com.umeng.sdk:share-wechat:latest.integration'//微分享登录
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //专门的微信登录功能（微信开放平台提供）
+    compile 'com.gcssloop.widget:rclayout:1.6.0'
+    //配合项目里面仓库地址  所对应的依赖地址
+    compile 'com.qianwen:okhttp-utils:3.8.0'
+    //里面是封装zhy的okhttp库
+    compile(name: 'takephoto_library-3.0.0', ext: 'aar')
+    //    compile files('libs/umeng-share-core-6.9.0.jar')//
+    //    compile files('libs/umeng-share-wechat-full-6.9.0.jar')
+    //    compile files('libs/umeng-sharetool-6.9.0.jar')
+    //    compile files('libs/wechat-sdk-android-without-mta-5.1.4.jar')
+    compile files('libs/core-3.0.0.jar')
+
+
+}

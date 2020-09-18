@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="12dip"
+    android:paddingBottom="12dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip">
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/gray_66"
+        android:textSize="12sp" />
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+
+                <TextView
+                    android:id="@+id/txt_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:textColor="@color/gray_33"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15sp"
+                    android:text="-3000"/>
+
+
+            </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/txt_content01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip"
+        android:paddingRight="20dip"
+        android:text="--"
+        android:textColor="@color/gray_66"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/txt_content02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dip"
+        android:text="--"
+        android:visibility="gone"
+        android:textColor="@color/gray_66"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txt_content03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dip"
+        android:text="--"
+        android:visibility="gone"
+
+        android:textColor="@color/gray_66"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/txt_content04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dip"
+        android:text="--"
+        android:visibility="gone"
+        android:textColor="@color/gray_66"
+        android:textSize="14sp" />
+</LinearLayout>

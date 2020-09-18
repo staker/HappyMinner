@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="appColorBackground">#ffffff</color>
+    <color name="appColorMain">#ffffff</color>
+
+    <color name="klineColor">#9EB4BF</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#666666</color>
+    <color name="gray_dd">#dddddd</color>
+    <color name="gray_aa">#aaaaaa</color>
+    <color name="gray_33">#333333</color>
+    <color name="gray_66">#666666</color>
+    <color name="gray_99">#999999</color>
+    <color name="translucent">#00000000</color>
+    <color name="translucent_dark">#80000000</color>
+    <color name="orange">#FF7800</color>
+    <color name="line_color">#E6E6E6</color>
+</resources>

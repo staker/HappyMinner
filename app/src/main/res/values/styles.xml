@@ -1,0 +1,112 @@
+<resources>
+
+    <!-- Base application theme. --><!-- 设置整个项目为沉静式状态栏 -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+    </style>
+
+
+
+    <!-- 给ScrollView设置的背景 -->
+    <style name="nestedScrollViewStyle">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:divider">#00000000</item>
+    </style>
+
+
+    <!-- 给ListView设置的通用背景 之类的 -->
+    <style name="listViewStyle">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:divider">#00000000</item>
+    </style>
+
+
+
+    <style name="vertical_line_style">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#E6E6E6</item>
+    </style>
+    <style name="horizontal_line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">#E6E6E6</item>
+    </style>
+
+
+
+
+
+
+    <!-- 这是设置透明Activity用到的style 这个是给直接继承Activity使用的透明Activity的Style-->
+
+    <style name="translucent">
+        <item name="android:windowBackground">@color/translucent_dark</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+
+
+
+    <!--全屏加透明,加这个style的原因主要是用于给继承AutoLayoutActivity不能使用普通Activity的透明style-->
+    <style name="TranslucentFullScreenTheme" parent="FullScreenTheme">
+        <item name="android:windowBackground">@color/translucent_dark</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!--全屏-->
+    <style name="FullScreenTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!--透明，有任务栏电量时间等-->
+    <style name="NoTitleTranslucentTheme" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/translucent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 给LoadingDialog设置的风格 -->
+    <style name="help_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="share_dialog_style" parent="help_dialog">
+        <item name="android:windowIsFloating">false</item>
+    </style>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_full_gray_5"
+    android:layout_marginTop="10dip"
+    android:paddingTop="8dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingBottom="8dip">
+
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_user_title_bg"/>
+
+    <ImageView
+        android:id="@+id/img_select"
+        android:layout_width="16dip"
+        android:layout_height="16dip"
+        android:layout_alignParentRight="true"
+        app:layout_auto_basewidth="height"
+        android:background="@drawable/icon_selected"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txt_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_name"
+        android:layout_marginTop="5dip"
+        android:paddingRight="20dip"
+        android:textSize="12sp"
+        android:textColor="@color/gray_66"/>
+
+</RelativeLayout>

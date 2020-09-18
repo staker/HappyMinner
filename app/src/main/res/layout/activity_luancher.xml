@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/luancher_bg"
+    android:id="@+id/mainLayout">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="240dip"
+            android:layout_height="236dip"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/luancher_first_logo"
+            android:layout_marginBottom="80dip"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txt_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+       android:layout_marginBottom="20dip"
+        android:text="版本:"
+        android:textSize="13sp"
+        android:textColor="#999999"/>
+</RelativeLayout>

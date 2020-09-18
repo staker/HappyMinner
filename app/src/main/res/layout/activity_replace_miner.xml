@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#00000000">
+
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="20dip"-->
+        <!--android:layout_marginRight="20dip"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:paddingTop="20dip"-->
+        <!--android:paddingBottom="20dip"-->
+        <!--android:background="#ff0000"-->
+        <!--&gt;-->
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+            android:layout_marginTop="80dip"
+            android:layout_marginBottom="80dip"
+            android:background="@drawable/shape_full_white_10"
+            >
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+android:layout_centerHorizontal="true"
+                android:text="请选择要替换的矿工"
+                android:textColor="@color/gray_33"
+                android:layout_marginTop="8dip"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/txt_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="被替换的矿工将以买入价的30%进行抵扣"
+                android:textColor="@color/gray_33"
+                android:layout_below="@+id/txt_title"
+                android:textSize="11sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_my_miner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="8dip"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txt_desc"
+                android:layout_above="@+id/txt_times"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="今日还可替换 1 次"
+                android:textColor="@color/gray_33"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dip"
+                android:paddingTop="8dip"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+    <!--</android.support.v7.widget.CardView>-->
+</RelativeLayout>

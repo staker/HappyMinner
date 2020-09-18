@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top" />
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+
+            android:background="@drawable/shape_gradient_full_blue_5"
+            android:orientation="vertical"
+            android:paddingBottom="20dip"
+            android:paddingTop="20dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="当前算力"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dip"
+                android:text="--"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+
+            android:background="@drawable/shape_full_white_5"
+            android:orientation="vertical"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="规则介绍"
+                android:textColor="@color/gray_33"
+                android:textSize="15sp" />
+
+            <View
+                style="@style/horizontal_line_style"
+                android:layout_marginTop="8dip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="8dip"
+                android:text="当前显示的是当前用户的总算力，括号中为通过收礼所增加的算力值。 算力越高的矿工，挖的蓝钻就越多。"
+                android:textColor="@color/gray_33"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/shape_top_left_right_full_white_5"
+            android:gravity="center"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="收支记录"
+            android:textColor="@color/gray_33"
+            android:textSize="15sp" />
+
+        <View style="@style/horizontal_line_style" />
+
+
+        <include layout="@layout/layout_spring_view" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

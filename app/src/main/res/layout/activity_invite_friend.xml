@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appColorBackground"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nest_scrollview"
+            style="@style/nestedScrollViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical"
+                android:scrollbars="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fe5340"
+                    android:orientation="vertical"
+                    android:paddingBottom="60dip"
+                    android:paddingTop="30dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dip"
+                        android:text="已获得奖励(蓝钻)"
+                        android:textColor="#ffffff"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/txt_total_reward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="12dip"
+                        android:text="0"
+                        android:textColor="#ffffff"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="-30dip"
+                    android:background="@drawable/shape_top_left_right_full_white_10"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="12dip"
+                        android:text="根据六度人脉奖励规则将会获得相应奖励额度，更多的转发给身边的朋友吧！(每一级的邀请奖励，最多领取100次。)"
+                        android:textColor="@color/gray_33"
+                        android:textSize="12sp" />
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_invite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="8dip"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingBottom="60dip" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/txt_invite_friend"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/selector_shape_gradient_blue_55"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="邀请好友"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <View style="@style/horizontal_line_style" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>
